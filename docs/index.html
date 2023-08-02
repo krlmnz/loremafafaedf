@@ -149,13 +149,13 @@
           type: 'circle',
           source: {
             type: 'geojson',
-            data: 'https://data.cityofnewyork.us/resource/7w4b-tj9d.json.geojson' // replace this with the url of your own geojson
+            data: 'https://data.cityofnewyork.us/resource/7w4b-tj9d.json' // replace this with the url of your own geojson
           },
           paint: {
             'circle-radius': [
               'interpolate',
               ['linear'],
-              ['number', ['get', 'Casualty']],
+              ['number', ['get', 'cnstrct_yr']],
               0,
               4,
               5,
